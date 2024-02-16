@@ -12,7 +12,13 @@
     <tbody>
       <tr>
         <td>Age</td>
-        <td>{{ date - character.yearOfBirth }}</td>
+        <td>
+          {{
+            character.yearOfBirth !== null
+              ? date - character.yearOfBirth
+              : "Age not Defined"
+          }}
+        </td>
       </tr>
       <tr>
         <td>Gender</td>
