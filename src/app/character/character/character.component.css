@@ -4,12 +4,13 @@
   justify-content: center;
 }
 .container {
-  border: 1px solid tomato;
+  border: 1px solid grey;
   flex-direction: column;
   padding: 10px;
   margin: 5px;
-  height: fit-contentk;
+  height: fit-content;
   width: 350px;
+  border-radius: 10px;
 }
 
 .character-name {
@@ -21,7 +22,7 @@
 .image {
   width: 250px;
   height: 320px;
-  border-radius: 50px;
+  border-radius: 20px;
   margin: auto;
 }
 
