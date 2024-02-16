@@ -1,1 +1,6 @@
-<app-character></app-character>
+<section class="results">
+  <app-character
+    *ngFor="let character of characterList"
+    [character]="character"
+  ></app-character>
+</section>

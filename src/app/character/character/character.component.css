@@ -1,29 +1,26 @@
-.try {
+.container,
+.character-name {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  height: 100vh;
+  justify-content: center;
 }
 .container {
   border: 1px solid tomato;
-  display: flex;
   flex-direction: column;
   padding: 10px;
-  justify-content: center;
   margin: 5px;
   height: fit-contentk;
+  width: 350px;
 }
 
 .character-name {
   font-weight: bold;
   font-size: 1.5rem;
   padding-bottom: 10px;
-  display: flex;
-  justify-content: center;
 }
 
 .image {
-  width: 100%;
+  width: 200px;
+  height: 300px;
   border-radius: 50px;
 }
 
