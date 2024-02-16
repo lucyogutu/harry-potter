@@ -1,5 +1,7 @@
 <section class="container">
-  <p class="character-name">{{ character.name }}</p>
+  <div class="name-container">
+    <p class="character-name">{{ character.name | uppercase }}</p>
+  </div>
   <img
     [src]="character.image"
     alt="A character"
@@ -10,7 +12,7 @@
     <tbody>
       <tr>
         <td>Age</td>
-        <td></td>
+        <td>{{ date - character.yearOfBirth }}</td>
       </tr>
       <tr>
         <td>Gender</td>
@@ -18,11 +20,11 @@
       </tr>
       <tr>
         <td>Hair Color</td>
-        <td>{{ character.hairColor }}</td>
+        <td>{{ character.hairColour }}</td>
       </tr>
       <tr>
         <td>Eye Color</td>
-        <td>{{ character.eyeColor }}</td>
+        <td>{{ character.eyeColour }}</td>
       </tr>
       <tr>
         <td>Species</td>

@@ -14,14 +14,15 @@
 
 .character-name {
   font-weight: bold;
-  font-size: 1.5rem;
-  padding-bottom: 10px;
+  font-size: 2rem;
+  padding: 20px;
 }
 
 .image {
-  width: 200px;
-  height: 300px;
+  width: 250px;
+  height: 320px;
   border-radius: 50px;
+  margin: auto;
 }
 
 .character-details-table {
