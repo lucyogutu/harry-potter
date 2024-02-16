@@ -1,11 +1,16 @@
 <section class="container">
   <p class="character-name">{{ character.name }}</p>
-  <img [src]="character.image" alt="A character" class="image" />
+  <img
+    [src]="character.image"
+    alt="A character"
+    class="image"
+    *ngIf="character.image !== ''"
+  />
   <table class="character-details-table">
     <tbody>
       <tr>
         <td>Age</td>
-        <td>100</td>
+        <td></td>
       </tr>
       <tr>
         <td>Gender</td>
