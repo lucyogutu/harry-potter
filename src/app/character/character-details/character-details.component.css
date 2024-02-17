@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.child {
+  width: 40%;
+  padding: 50px;
+}
+
+.child img {
+  width: 90%;
+  height: auto;
+  border-radius: 10%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td {
+  border: 1px solid grey;
+  padding: 20px;
+  font-size: 1.5rem;
+}

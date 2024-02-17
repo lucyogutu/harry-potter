@@ -1,4 +1,55 @@
-<p>character-details works!</p>
-<p> id: {{ character?.id }}</p>
-<p> Name: {{ character?.name }}</p>
-<p>Year of Birth: {{ character?.yearOfBirth }}</p>
+<section class="container">
+  <div class="child">
+    <img [src]="character?.image" alt="" />
+  </div>
+  <div class="child">
+    <table>
+      <tbody>
+        <tr>
+          <td>Name</td>
+          <td>{{ character?.name }}</td>
+        </tr>
+        <tr>
+          <td>Age</td>
+          <td>
+            {{
+              character?.yearOfBirth !== null
+                ? date - (character?.yearOfBirth ?? 0)
+                : "Age not Defined"
+            }}
+          </td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td>{{ character?.gender }}</td>
+        </tr>
+        <tr>
+          <td>Hair Color</td>
+          <td>
+            <span
+              class="circle-color"
+              [ngStyle]="{ 'background-color': character?.hairColour }"
+            ></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Eye Color</td>
+          <td>
+            <span
+              class="circle-color"
+              [ngStyle]="{ backgroundColor: character?.eyeColour }"
+            ></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Species</td>
+          <td>{{ character?.species }}</td>
+        </tr>
+        <tr>
+          <td>House</td>
+          <td>{{ character?.house }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

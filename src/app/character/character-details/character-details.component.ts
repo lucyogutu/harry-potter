@@ -13,14 +13,17 @@ export class CharacterDetailsComponent {
   characterService: CharacterService = inject(CharacterService);
 
   character: Character | undefined;
+  date: number = new Date().getFullYear();
 
   constructor() {
     const characterId: string = this.route.snapshot.params['id'];
     // this.characterService.getCharacterById(characterId).then((character: Character[]) => {
     //   this.character = character[0];
     // });
-    this.characterService.getCharacterById(characterId).subscribe((character: Character[]) => {
-      this.character = character[0];
-    });
+    this.characterService
+      .getCharacterById(characterId)
+      .subscribe((character: Character[]) => {
+        this.character = character[0];
+      });
   }
 }
