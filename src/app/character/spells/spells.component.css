@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    margin: 40px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td:first-child {
+    width: 30%;
+}
+
+td {
+    border: 1px solid grey;
+    padding: 20px;
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
