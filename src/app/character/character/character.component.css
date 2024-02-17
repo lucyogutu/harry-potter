@@ -36,3 +36,8 @@
   padding: 10px;
   font-size: 1.5rem;
 }
+
+.circle-color {
+  border-radius: 50%;
+  padding: 4px 14px;
+}

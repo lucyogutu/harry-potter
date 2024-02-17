@@ -26,11 +26,21 @@
       </tr>
       <tr>
         <td>Hair Color</td>
-        <td>{{ character.hairColour }}</td>
+        <td>
+          <span
+            class="circle-color"
+            [ngStyle]="{ 'background-color': character.hairColour }"
+          ></span>
+        </td>
       </tr>
       <tr>
         <td>Eye Color</td>
-        <td>{{ character.eyeColour }}</td>
+        <td>
+          <span
+            class="circle-color"
+            [ngStyle]="{ 'backgroundColor': character.eyeColour }"
+          ></span>
+        </td>
       </tr>
       <tr>
         <td>Species</td>
