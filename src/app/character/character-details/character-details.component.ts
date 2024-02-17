@@ -16,11 +16,11 @@ export class CharacterDetailsComponent {
 
   constructor() {
     const characterId: string = this.route.snapshot.params['id'];
-    // this.characterService.getCharacterById(characterId).then((character) => {
-    //   this.character = character;
+    // this.characterService.getCharacterById(characterId).then((character: Character[]) => {
+    //   this.character = character[0];
     // });
-    this.characterService.getCharacterById(characterId).subscribe((character) => {
-      this.character = character;
+    this.characterService.getCharacterById(characterId).subscribe((character: Character[]) => {
+      this.character = character[0];
     });
   }
 }

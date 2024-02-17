@@ -13,12 +13,12 @@ export class CharacterService {
   getCharacters(): Observable<Character[]> {
     return this.http.get<Character[]>(allCharactersUrl);
   }
-  // async getCharacterById(id: string): Promise<Character | undefined> {
+  // async getCharacterById(id: string): Promise<Character[] | undefined> {
   //   const data = await fetch(`${characterByIdUrl}/${id}`);
-  //   return (await data.json()) ?? {};
+  //   return (await data.json()) ?? [];
   // }
 
-  getCharacterById(id: string): Observable<Character | undefined> {
-    return this.http.get<Character>(characterByIdUrl + '/' + id);
+  getCharacterById(id: string): Observable<Character[]> {
+    return this.http.get<Character[]>(characterByIdUrl + '/' + id);
   }
 }
