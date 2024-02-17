@@ -1,59 +1,61 @@
-<section class="container">
-  <div class="name-container">
-    <p class="character-name">{{ character.name | uppercase }}</p>
-  </div>
-  <img
-    [src]="character.image"
-    alt="A character"
-    class="image"
-    *ngIf="character.image !== ''"
-  />
-  <table class="character-details-table">
-    <tbody>
-      <tr>
-        <td>Age</td>
-        <td>
-          {{
-            character.yearOfBirth !== null
-              ? date - character.yearOfBirth
-              : "Age not Defined"
-          }}
-        </td>
-      </tr>
-      <tr>
-        <td>Gender</td>
-        <td>{{ character.gender }}</td>
-      </tr>
-      <tr>
-        <td>Hair Color</td>
-        <td>
-          <span
-            class="circle-color"
-            [ngStyle]="{ 'background-color': character.hairColour }"
-          ></span>
-        </td>
-      </tr>
-      <tr>
-        <td>Eye Color</td>
-        <td>
-          <span
-            class="circle-color"
-            [ngStyle]="{ 'backgroundColor': character.eyeColour }"
-          ></span>
-        </td>
-      </tr>
-      <tr>
-        <td>Species</td>
-        <td>{{ character.species }}</td>
-      </tr>
-      <tr>
-        <td>House</td>
-        <td>{{ character.house }}</td>
-      </tr>
-      <tr>
-        <td>Ancestry</td>
-        <td>{{ character.ancestry }}</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
+<a [routerLink]="['/character/details', character.id]">
+  <section class="container">
+    <div class="name-container">
+      <p class="character-name">{{ character.name | uppercase }}</p>
+    </div>
+    <img
+      [src]="character.image"
+      alt="A character"
+      class="image"
+      *ngIf="character.image !== ''"
+    />
+    <table class="character-details-table">
+      <tbody>
+        <tr>
+          <td>Age</td>
+          <td>
+            {{
+              character.yearOfBirth !== null
+                ? date - character.yearOfBirth
+                : "Age not Defined"
+            }}
+          </td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td>{{ character.gender }}</td>
+        </tr>
+        <tr>
+          <td>Hair Color</td>
+          <td>
+            <span
+              class="circle-color"
+              [ngStyle]="{ 'background-color': character.hairColour }"
+            ></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Eye Color</td>
+          <td>
+            <span
+              class="circle-color"
+              [ngStyle]="{ backgroundColor: character.eyeColour }"
+            ></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Species</td>
+          <td>{{ character.species }}</td>
+        </tr>
+        <tr>
+          <td>House</td>
+          <td>{{ character.house }}</td>
+        </tr>
+        <tr>
+          <td>Ancestry</td>
+          <td>{{ character.ancestry }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</a>
