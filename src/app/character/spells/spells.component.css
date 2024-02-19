@@ -8,6 +8,7 @@
 
 table {
     border-collapse: collapse;
+    box-shadow: 3px 3px 5px gray ;
 }
 
 td:first-child {
@@ -16,6 +17,15 @@ td:first-child {
 
 td:nth-child(even) {
     width: 20%;
+}
+
+thead {
+    background-color: maroon;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(173, 143, 143);
 }
 
 th, td {
