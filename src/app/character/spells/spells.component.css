@@ -3,6 +3,7 @@
     justify-content: center;
     height: fit-content;
     margin: 40px;
+    width: 50%;
 }
 
 table {
@@ -10,10 +11,14 @@ table {
 }
 
 td:first-child {
-    width: 30%;
+    width: 10%;
 }
 
-td {
+td:nth-child(even) {
+    width: 20%;
+}
+
+th, td {
     border: 1px solid grey;
     padding: 20px;
     line-height: 1.5;

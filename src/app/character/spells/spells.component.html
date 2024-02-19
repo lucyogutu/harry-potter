@@ -1,8 +1,14 @@
 <div class="container">
   <div class="container-component">
     <table>
+      <thead>
+        <th>#</th>
+        <th>Name</th>
+        <th>Description</th>
+      </thead>
       <tbody>
-        <tr *ngFor="let spell of spellList">
+        <tr *ngFor="let spell of spellList; let i = index">
+          <td>{{ i + 1 }}</td>
           <td>{{ spell.name }}</td>
           <td>{{ spell.description }}</td>
         </tr>
