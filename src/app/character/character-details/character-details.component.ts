@@ -14,14 +14,20 @@ export class CharacterDetailsComponent {
 
   character: Character | undefined;
   date: number = new Date().getFullYear();
+  characterId: string = '';
 
   constructor() {
-    const characterId: string = this.route.snapshot.params['id'];
+    // const characterId: string = this.route.snapshot.params['id'];
+    // const characterId: string = this.route.snapshot.paramMap.constget('id');
+    this.route.params.subscribe((data) => {
+      this.characterId = data['id'];
+    });
+
     // this.characterService.getCharacterById(characterId).then((character: Character[]) => {
     //   this.character = character[0];
     // });
     this.characterService
-      .getCharacterById(characterId)
+      .getCharacterById(this.characterId)
       .subscribe((character: Character[]) => {
         this.character = character[0];
       });
